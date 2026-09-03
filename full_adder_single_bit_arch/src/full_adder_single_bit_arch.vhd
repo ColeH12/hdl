@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
--- Dr. Kaputa
+-- Cole Hayes
 -- single bit full adder [archavioral]
 -------------------------------------------------------------------------------
 library ieee;
@@ -23,7 +23,7 @@ signal av: std_logic_vector(1 downto 0);
 signal bv: std_logic_vector(1 downto 0);
 signal cinv: std_logic_vector(1 downto 0);
 
-begin
+begin -- Arch code
   sum <= (a xor b) xor cin;
   cout <= (a and b) or (b and cin) or (a and cin);
 end arch; 
