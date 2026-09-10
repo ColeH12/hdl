@@ -53,8 +53,8 @@ sequential_stimuli: if SEQUENTIAL_FLAG generate
     begin
       report "****************** sequential testbench start ****************";
       wait for 10 ns;   -- let all the initial conditions trickle through
-	  for k = 0 to 1 loop
-	  cin <= not cin
+	 for k in 0 to 1 loop
+	 cin <= not cin;
       for i in 0 to ((2 ** NUM_BITS) - 1) loop
         a <= std_logic_vector(unsigned(a) + 1 );
         for j in 0 to ((2 ** NUM_BITS) - 1)  loop
@@ -62,7 +62,7 @@ sequential_stimuli: if SEQUENTIAL_FLAG generate
           wait for 10 ns;
         end loop;
       end loop;
-	  end loop;
+	 end loop;
       report "****************** sequential testbench stop ****************";
       wait;
   end process; 
