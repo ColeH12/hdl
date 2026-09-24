@@ -38,7 +38,7 @@ end component;
 
 component generic_counter is
 generic (
-    max_count : integer range 0 to 100 := 3
+    max_count       : integer := 3
 );
   port (
     clk             : in  std_logic;
@@ -67,7 +67,7 @@ end process;
 uut: seven_seg  
   port map(
     reset       => reset,
-    bcd     => "0001",
+    bcd          => sum_sig,
     seven_seg_out    => seven_seg_out
   );
   
