@@ -1,6 +1,6 @@
 -------------------------------------------------------------------------------
 -- Cole Hayes
--- blink top
+-- lab3_top
 -------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
@@ -17,6 +17,7 @@ architecture beh of top is
 
 component seven_seg is
   port (
+  clk  : in std_logic;
     reset             : in  std_logic; 
     bcd           : in  std_logic_vector(3 downto 0);
     seven_seg_out          : out std_logic_vector(6 downto 0)
@@ -66,6 +67,7 @@ end process;
 
 uut: seven_seg  
   port map(
+  clk    => clk,
     reset       => reset,
     bcd          => sum_sig,
     seven_seg_out    => seven_seg_out
