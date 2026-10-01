@@ -25,21 +25,21 @@ set_global_assignment -name VHDL_FILE ../../src/generic_adder_beh.vhd
 # 3] set your pin constraints here
 set_location_assignment PIN_AB12 -to reset
 set_location_assignment PIN_AF14 -to clk
-set_location_assignment PIN_V16 -to output
 
-set_location_assignment PIN_AE26 -to seven_seg_out [0]
-set_location_assignment PIN_AE27 -to seven_seg_out [1]
-set_location_assignment PIN_AE28 -to seven_seg_out [2]
-set_location_assignment PIN_AG27 -to seven_seg_out [3]
-set_location_assignment PIN_AF28 -to seven_seg_out [4]
-set_location_assignment PIN_AG28 -to seven_seg_out [5]
-set_location_assignment PIN_AH28 -to seven_seg_out [6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[6]
+
+set_location_assignment PIN_AE26 -to seven_seg_out[0]
+set_location_assignment PIN_AE27 -to seven_seg_out[1]
+set_location_assignment PIN_AE28 -to seven_seg_out[2]
+set_location_assignment PIN_AG27 -to seven_seg_out[3]
+set_location_assignment PIN_AF28 -to seven_seg_out[4]
+set_location_assignment PIN_AG28 -to seven_seg_out[5]
+set_location_assignment PIN_AH28 -to seven_seg_out[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seven_seg_out[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seven_seg_out[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seven_seg_out[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seven_seg_out[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seven_seg_out[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seven_seg_out[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seven_seg_out[6]
 execute_flow -compile
 project_close
